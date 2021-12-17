@@ -55,6 +55,9 @@ public:
     void setContextProperty(const QString &, const QVariant &);
     void setContextProperty(const QString &, QObject *);
 
+    void disableNativeGestures();
+    void enableNativeGestures();
+
 signals:
     void visibleChanged(bool arg);
 

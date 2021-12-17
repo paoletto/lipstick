@@ -287,3 +287,13 @@ void HomeWindow::setContextProperty(const QString &property, QObject *value)
     d->context->setContextProperty(property, value);
 }
 
+void HomeWindow::disableNativeGestures()
+{
+    d->window->setFlags(d->window->flags() & ~Qt::WindowOverridesSystemGestures);
+}
+
+void HomeWindow::enableNativeGestures()
+{
+    d->window->setFlags(d->window->flags() | Qt::WindowOverridesSystemGestures);
+}
+
